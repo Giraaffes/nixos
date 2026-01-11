@@ -1,0 +1,1 @@
+nix-build '<nixpkgs/nixos>' -A config.system.build.isoImage.iso -I nixos-config=installer.nix -o nixos-installer.iso

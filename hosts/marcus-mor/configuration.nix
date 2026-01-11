@@ -9,9 +9,11 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [
     rtl8821cu
   ];
+  
   environment.systemPackages = with pkgs; [
     usbutils
-    usb-modeswitch
   ];
+  
+  hardware.usb-modeswitch.enable = true;
 }
 

@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./home.nix
+  ];
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.systemd-boot.enable = false;
@@ -23,13 +27,7 @@
   console.useXkbConfig = true;
 
   networking.networkmanager.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    usbmuxd
-  ];
-
   services.usbmuxd.enable = true;
-  systemd.services.usbmuxd.wantedBy = [ "multi-user.target" ];
 
   users.users.marcus = {
     isNormalUser = true;
@@ -40,21 +38,6 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-  };
-  home-manager.users.marcus = {
-    programs.bash.enable = true;
-
-    home.packages = with pkgs; [
-      firefox
-      vscode dbeaver-bin
-      git gh
-    ];
-    home.shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/nix-config";
-      rebuild-reboot = "sudo nixos-rebuild boot --flake ~/nix-config && reboot";
-    };
-
-    home.stateVersion = "25.11";
   };
 
   system.stateVersion = "26.05";
