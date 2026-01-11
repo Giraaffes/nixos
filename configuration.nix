@@ -10,7 +10,6 @@
     systemd-boot.enable = false;
     timeout = 3;
     grub.enable = true;
-    grub.device = "/dev/sda";
     grub.useOSProber = true;
   };
 

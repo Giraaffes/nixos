@@ -22,5 +22,6 @@
   in
   {
     nixosConfigurations.marcus-mor = mkSystem ./hosts/marcus-mor/configuration.nix;
+    nixosConfigurations.acto = mkSystem ./hosts/acto/configuration.nix;
   };
 }

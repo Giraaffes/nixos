@@ -19,11 +19,6 @@
       ventoy-full-qt
     ];
 
-    home.shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/nix-config";
-      rebuild-reboot = "sudo nixos-rebuild boot --flake ~/nix-config && reboot";
-    };
-
     home.stateVersion = "25.11";
   };
 }
