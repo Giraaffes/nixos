@@ -14,8 +14,8 @@
   hardware.usb-modeswitch.enable = true;
   services.usbmuxd.enable = true;
 
-  boot.extraModulePackages = [ 
-    config.boot.kernelPackages.rtl8188gu 
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    rtl8821cu
   ];
   
   environment.systemPackages = with pkgs; [

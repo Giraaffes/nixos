@@ -6,9 +6,13 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  boot.loader.systemd-boot.enable = false;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader = {
+    systemd-boot.enable = false;
+    timeout = 3;
+    grub.enable = true;
+    grub.device = "/dev/sda";
+    grub.useOSProber = true;
+  };
 
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
