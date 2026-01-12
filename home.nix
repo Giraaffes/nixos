@@ -1,10 +1,12 @@
-{ pkgs, home-manager, ... }:
+{ pkgs, ... }:
 {
   nixpkgs.config.permittedInsecurePackages = [
     "ventoy-qt5-1.1.10"
   ];
 
   home-manager.users.marcus = {
+    imports = [ ./plasma.nix ];
+
     programs.bash.enable = true;
     programs.git.enable = true;
     programs.git.settings.user = {
