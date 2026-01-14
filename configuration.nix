@@ -25,16 +25,18 @@
   ];
 
   time.timeZone = "Europe/Copenhagen";
-  i18n.defaultLocale = "da_DK.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
   services.xserver.xkb.layout = "dk";
   console.useXkbConfig = true;
 
   networking.networkmanager.enable = true;
   services.usbmuxd.enable = true;
 
+  virtualisation.docker.enable = true;
+
   users.users.marcus = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
     shell = pkgs.bash;
   };
 
