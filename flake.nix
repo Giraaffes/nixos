@@ -31,7 +31,7 @@
           home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
         nur.modules.nixos.default
-        ./configuration.nix
+        ./common/configuration.nix
         hostConfig
       ];
     };

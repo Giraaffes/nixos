@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+    imports = [
+        ./klassy.nix
+    ];
+
     home.packages = [
         pkgs.nur.repos.shadowrz.klassy-qt6
     ];
@@ -12,11 +16,5 @@
         windowDecorations.library = "org.kde.klassy";
         windowDecorations.theme = "Klassy";
         cursor.theme = "Breeze_Light";
-    };
-
-    programs.plasma.configFile."klassy/klassyrc" = {
-        "Windeco" = {
-            "ButtonIconStyle" = "StyleFluent";
-        };
     };
 }
