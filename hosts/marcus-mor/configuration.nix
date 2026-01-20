@@ -19,8 +19,8 @@
   ];
 
   home-manager.users.marcus.home.shellAliases = {
-    rebuild = "sudo nixos-rebuild switch --flake ~/nix-config#marcus-mor";
-    rebuild-reboot = "sudo nixos-rebuild boot --flake ~/nix-config#marcus-mor && reboot";
+    rebuild = "sudo nixos-rebuild switch --flake ~/nixos#marcus-mor";
+    rebuild-reboot = "sudo nixos-rebuild boot --flake ~/nixos#marcus-mor && reboot";
   };
 }
 
