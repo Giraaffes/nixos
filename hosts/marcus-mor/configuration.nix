@@ -20,6 +20,7 @@
 
   home-manager.users.marcus.home.shellAliases = {
     rebuild = "sudo nixos-rebuild switch --flake ~/nixos#marcus-mor";
+    rebuild-logout = "sudo nixos-rebuild switch --flake ~/nixos#marcus-mor && qdbus org.kde.Shutdown /Shutdown logout";
     rebuild-reboot = "sudo nixos-rebuild boot --flake ~/nixos#marcus-mor && reboot";
   };
 }

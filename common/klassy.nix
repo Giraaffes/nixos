@@ -1,8 +1,65 @@
-{ pkgs, ... }:
+{ ... }:
 {
     programs.plasma.configFile."klassy/klassyrc" = {
-        "Windeco" = {
-            "ButtonIconStyle" = "StyleFluent";
-        };
+		"ButtonBehaviour" = {
+			"ShowCloseOutlineOnHoverActive" = "false";
+			"ShowCloseOutlineOnHoverInactive" = "false";
+			"ShowCloseOutlineOnPressActive" = "false";
+			"ShowCloseOutlineOnPressInactive" = "false";
+			"ShowOutlineOnHoverActive" = "false";
+			"ShowOutlineOnHoverInactive" = "false";
+			"ShowOutlineOnPressActive" = "false";
+			"ShowOutlineOnPressInactive" = "false";
+		};
+		"ButtonColors" = {
+			"ButtonBackgroundColorsActive" = "TitleBarTextNegativeClose";
+			"ButtonBackgroundColorsInactive" = "TitleBarTextNegativeClose";
+			"ButtonBackgroundOpacityActive" = "10";
+			"ButtonBackgroundOpacityInactive" = "10";
+			"ButtonIconColorsActive" = "TitleBarText";
+			"ButtonIconOpacityInactive" = "100";
+			"ButtonOverrideColorsActiveClose" = "{\"BackgroundHover\":[\"NegativeFullySaturated\"],\"BackgroundPress\":[\"NegativeSaturated\",80]}";
+			"ButtonOverrideColorsInactiveClose" = "{\"BackgroundHover\":[\"NegativeFullySaturated\"],\"BackgroundPress\":[\"NegativeSaturated\",80]}";
+			"LockButtonColorsActiveInactive" = "true";
+			"OnPoorIconContrastActive" = "Nothing";
+			"OnPoorIconContrastInactive" = "Nothing";
+		};
+		"ButtonSizing" = {
+			"ButtonCornerRadius" = "Custom";
+			"ButtonCustomCornerRadius" = "0";
+			"FullHeightButtonSpacingLeft" = "0";
+			"FullHeightButtonSpacingRight" = "0";
+			"FullHeightButtonWidthMarginLeft" = "3";
+			"FullHeightButtonWidthMarginRight" = "14";
+			"IntegratedRoundedRectangleBottomPadding" = "0.5";
+			"SpacerButtonWidthRelative" = "50";
+		};
+		"ShadowStyle" = {
+			"ShadowStrength" = "102";
+		};
+		"TitleBarOpacity" = {
+			"ActiveTitleBarOpacity" = "75";
+		};
+		"TitleBarSpacing" = {
+			"LockTitleBarLeftRightMargins" = "false";
+			"PercentMaximizedTopBottomMargins" = "50";
+			"TitleAlignment" = "AlignLeft";
+			"TitleBarBottomMargin" = "2.25";
+			"TitleBarLeftMargin" = "2";
+			"TitleBarTopMargin" = "2.25";
+		};
+		"Windeco" = {
+			"ButtonIconStyle" = "StyleFluent";
+			"ButtonShape" = "ShapeFullHeightRectangle";
+			"ColorizeThinWindowOutlineWithButton" = "false";
+			"IconSize" = "IconMedium";
+			"SystemIconSize" = "SystemIcon20";
+			"WindowCornerRadius" = "8";
+		};
+		"WindowOutlineStyle" = {
+			"LockThinWindowOutlineStyleActiveInactive" = "true";
+			"ThinWindowOutlineStyleActive" = "WindowOutlineContrast";
+			"ThinWindowOutlineThickness" = "1.75";
+		};
     };
 }
