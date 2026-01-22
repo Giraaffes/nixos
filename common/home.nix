@@ -26,6 +26,7 @@
       prisma-engines_7 openssl # For Prisma
       gimp2 # Others
 
+      nixd # Nix language server
       ventoy-full-qt # For Nix .iso installer
     ];
 

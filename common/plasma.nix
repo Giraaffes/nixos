@@ -19,11 +19,31 @@
     cursor.theme = "Breeze_Light";
   };
 
+  programs.plasma.kwin = {
+    effects.shakeCursor.enable = false;
+  };
+
   # Disables top left corner action
   programs.plasma.configFile."kwinrc" = {
     "Effect-overview" = {
       "BorderActivate" = "9";
     };
+  };
+
+  programs.plasma.powerdevil.AC = {
+    autoSuspend.action = "nothing";
+    dimDisplay.enable = false;
+    turnOffDisplay.idleTimeout = "never";
+    whenLaptopLidClosed = "doNothing";
+    powerProfile = "performance";
+  };
+
+  programs.plasma.kscreenlocker = {
+    autoLock = false;
+  };
+
+  programs.plasma.session = {
+    general.askForConfirmationOnLogout = false;
   };
 
   programs.plasma.panels = [
@@ -52,7 +72,7 @@
               "applications:org.kde.dolphin.desktop"
               "applications:org.kde.konsole.desktop"
               "applications:firefox.desktop"
-              "applications:code-url-handler.desktop"
+              "applications:code.desktop"
             ];
           };
         }

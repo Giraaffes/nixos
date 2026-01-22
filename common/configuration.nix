@@ -22,6 +22,7 @@
     gwenview
     okular
     kwalletmanager
+    plasma-browser-integration
   ];
 
   time.timeZone = "Europe/Copenhagen";
