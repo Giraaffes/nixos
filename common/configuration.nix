@@ -13,6 +13,8 @@
     grub.useOSProber = true;
   };
 
+  swapDevices = [{ device = "/swapfile"; size = 8 * 1024; }];
+
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
