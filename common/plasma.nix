@@ -9,7 +9,7 @@
   ];
 
   programs.plasma.enable = true;
-  programs.plasma.overrideConfig = true;
+  # programs.plasma.overrideConfig = true;
 
   programs.plasma.workspace = {
     colorScheme = "KlassyLight";
