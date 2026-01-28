@@ -21,7 +21,6 @@
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     oxygen
     elisa
-    gwenview
     okular
     kwalletmanager
     plasma-browser-integration

@@ -96,13 +96,13 @@
               shown = [
                 "org.kde.plasma.networkmanagement"
                 "org.kde.plasma.volume"
-                "org.kde.plasma.notifications"
                 "org.kde.plasma.battery"
               ];
               hidden = [
                 "org.kde.plasma.clipboard"
                 "org.kde.plasma.brightness"
                 "org.kde.plasma.devicenotifier"
+                "org.kde.plasma.notifications"
                 "org.kde.kscreen"
               ];
             };
