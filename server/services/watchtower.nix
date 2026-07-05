@@ -12,7 +12,7 @@
       "/var/run/docker.sock:/var/run/docker.sock"
     ];
     cmd = [
-      "--interval" "60"
+      "--interval" "10"
       "--cleanup"
       "--include-restarting"
     ];
