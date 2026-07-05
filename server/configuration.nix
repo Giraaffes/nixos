@@ -11,7 +11,11 @@
 
   services.tailscale.enable = true;
 
-  services.nginx.enable = true;
+  services.nginx = {
+    enable = true;
+    recommendedProxySettings = true;
+    recommendedTlsSettings = true;
+  };
   security.acme = {
     acceptTerms = true;
     defaults.email = "marcusfaerk@gmail.com";
